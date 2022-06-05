@@ -8,6 +8,7 @@ import os
 import json
 import math
 import random
+from config import TAGS,BGDIR,QUOTEFILE
 
 
 def recommend_font_size(text):
@@ -36,26 +37,30 @@ def wrap_text(text, w=30):
     return new_text
 
 
-bgdir = "media/"
 
-tags = ["love", "death", "cry", "heartbreak", "romance"]
 
-quotefile = "quotes.json"
-with open(quotefile) as qfp:
+with open(QUOTEFILE, "r+") as qfp:
     data = json.load(qfp)
-    randomtag = random.choice(tags)
-    quoteobj = random.choice(data[randomtag]["children"])
+    randomtag = random.choice(TAGS)
+    randomidx = random.randint(0, len(data[randomtag]["children"]) - 1)
+    quoteobj = data[randomtag]["children"][randomidx]
+    while quoteobj["used"]:
+        randomidx = random.randint(0, len(data[randomtag]["children"]) - 1)
+        quoteobj = data[randomtag]["children"][randomidx]
+    data[randomtag]["children"][randomidx]["used"] = True
     quote = quoteobj["text"]
     author = quoteobj["author"]
+    qfp.seek(0)
+    qfp.write(json.dumps(data))
+    qfp.truncate()
 
 text = quote
-# text = quote + "\n\n  -  " + author
 
 FONT = "fonts/JosefinSans-Bold.ttf"
 FONT_SIZE = recommend_font_size(text)
 
-bg_options = os.listdir(bgdir)
-background_img = os.path.join(bgdir, random.choice(bg_options))
+bg_options = os.listdir(BGDIR)
+background_img = os.path.join(BGDIR, random.choice(bg_options))
 
 bgimg = Image.open(background_img)
 bgimg = bgimg.convert("RGBA")
@@ -81,7 +86,7 @@ draw.rectangle(
             IMAGE_HEIGHT - padding,
         ),
     ),
-    fill=(62, 59, 56, 150),
+    fill=(62, 59, 56, 170),
 )
 bgimg = Image.alpha_composite(bgimg, overlay)
 
@@ -138,7 +143,6 @@ draw.multiline_text(
 )
 img.save("quote.png", "PNG")
 
-
 # img = Image.open(photo)
 # img_width = img.size[0]
 # img_height = img.size[1]
@@ -147,4 +151,3 @@ img.save("quote.png", "PNG")
 # img = img.resize(maxsize, Image.Resampling.NEAREST)
 # img = img.convert("RGB")
 # img.save(new_img)
-

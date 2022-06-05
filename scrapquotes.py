@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import re
 import requests
 import json
+from config import TAGS
 
 
 def geturl(tag: list, page=1):
@@ -54,12 +55,12 @@ def getquote(tag, page=1):
 
 
 def main():
-    tags = ["love", "death", "cry", "heartbreak", "romance"]
     quotes = {}
-    for tag in tags:
+    for tag in TAGS:
         quotes[tag] = getquote(tag)
-        with open("quotes.json", "w") as json_file:
-            json.dump(quotes, json_file, indent=4, sort_keys=True)
+
+    with open("quotes.json", "w") as json_file:
+        json.dump(quotes, json_file, indent=4, sort_keys=True)
 
 
 main()

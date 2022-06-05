@@ -5,18 +5,8 @@ import re
 import json
 import xmltodict
 from bs4 import BeautifulSoup
-import urllib.request 
-
-blogs = [
-    "queenmoriarty",
-    "mkvx",
-    "dearly-academic",
-    "thequietesthing",
-    "rosieangell",
-    "ancientsstudies",
-    "thefallenauthor",
-    "daughterofliterature",
-]
+import urllib.request
+from config import TUMBLR_BLOGS
 
 
 def scrap_tumblr(blog, num, start):
@@ -65,7 +55,7 @@ def download_image(path, name, url):
             print("Failed: ", e)
 
 
-for blog in blogs:
+for blog in TUMBLR_BLOGS:
     print(f"Scrapping {blog}")
     scrap_tumblr(blog, 20, 1)
 
