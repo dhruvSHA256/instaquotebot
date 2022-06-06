@@ -40,4 +40,4 @@ TUMBLR_BLOGS = [
 FONT = "fonts/JosefinSans-Bold.ttf"
 OPACITY = 170  # 0-255
 
-IG_TAGS = "#academia #ancientrome #aristotle #bookquotes #classicliterature #classics #darkacademiaaesthetic #existential #hopelessromantic #lifequotes #literature #nihilist #philosophy #poetry #quotesdaily #romanticism #sad #shakespeare #socrates #stoicism"
+IG_TAGS = "#academia #ancientrome #aristotle #bookquotes #classicliterature #classics #darkacademiaaesthetic #existential #hopelessromantic #lifequotes #literature #nihilist #philosophy #poetry #quotesdaily #romanticism #sad #shakespeare #socrates #stoicism #love #romance #broken"

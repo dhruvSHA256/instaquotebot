@@ -7,6 +7,11 @@ import random
 
 def convert_img_insta(img, format="RGB"):
     # ratio = 4:5 = .80; width/height = .80; width = .80 * height
+
+    # if img is filename
+    if isinstance(img, str):
+        img = Image.open(img)
+
     img_width, img_height = img.size
     minsize = (math.ceil(0.80 * img_height), img_height)
     img = img.resize(minsize, Image.Resampling.NEAREST)
