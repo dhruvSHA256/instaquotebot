@@ -14,5 +14,9 @@ so I decided to make my own bot to make other people feel sad.
 - Instagram posts are generated using [pillow](https://pillow.readthedocs.io/en/stable/index.html) and posted using [instabot](https://instagrambot.github.io/docs/en/)
 - I have a cronjob set which posts new image quotes every 69*2 = 138 mins.
 
+## TODO
+
+- refactoring
+- using a db instead of json
 
 PS:For educational purpose only
