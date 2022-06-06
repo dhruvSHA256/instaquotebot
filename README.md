@@ -1,5 +1,7 @@
 # Insta Sad Aesthetic Quote Generator
 
+![Example Quote](examplequote.png)
+
 ## Why
 
 I was going through a phase of self induced sadness, and endlessly scroll through sad
@@ -19,4 +21,4 @@ so I decided to make my own bot to make other people feel sad.
 - refactoring
 - using a db instead of json
 
-PS:For educational purpose only
+(PS:For educational purpose only)

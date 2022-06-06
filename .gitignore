@@ -1,6 +1,7 @@
 media/*
 *.REMOVE_ME
-quotes.json
+*.json
 config/*
 quote.png
+quotes.json
 fonts/*

@@ -26,8 +26,7 @@ def convert_img_insta(photo, new_img):
 
 convert_img_insta(photo, new_img)
 
-caption = "I should study instead but I am literally dead and have no motivation \n\n #academia #achilles #ancientrome #aristotle #bookquotes #books #classicliterature #classics #darkacademiaaesthetic #dostoyevsky #englishliterature #existential #followforfollowback #hopelessromantic #ilubutdoI #lifephilosophy #lifequotes #likeforlikes #literature #mythology #nihilist #philosophical #philosophy #philosophyquotes #plato #poetry #positivityquotes #quotedaily #quotesaboutlife #quotesdaily #quotesindonesia #quotesoftheday #quotestoday #quotetoliveby #romanticism #sad #shakespeare #socrates #stoicism #successquotes #thisisallbullshit #virgil #virgin #wisdom #writersofinstagram"
-
+caption = "\n\n.... #academia #ancientrome #aristotle #bookquotes #classicliterature #classics #darkacademiaaesthetic #existential #hopelessromantic #lifequotes #literature #nihilist #philosophy #poetry #quotesdaily #romanticism #sad #shakespeare #socrates #stoicism"
 
 bot.upload_photo(
     new_img,

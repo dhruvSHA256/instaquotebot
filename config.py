@@ -17,7 +17,7 @@ TAGS = [
 ]
 
 BGDIR = "media/"
-QUOTEFILE = "quotes.json"
+QUOTEFILE = "config/quotes.json"
 
 USERNAME = os.environ["IGUSERNAME"]
 PASS = os.environ["IGPASS"]
