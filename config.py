@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 import os
 
 TAGS = [
@@ -37,3 +36,8 @@ TUMBLR_BLOGS = [
     "thefallenauthor",
     "daughterofliterature",
 ]
+
+FONT = "fonts/JosefinSans-Bold.ttf"
+OPACITY = 170  # 0-255
+
+IG_TAGS = "#academia #ancientrome #aristotle #bookquotes #classicliterature #classics #darkacademiaaesthetic #existential #hopelessromantic #lifequotes #literature #nihilist #philosophy #poetry #quotesdaily #romanticism #sad #shakespeare #socrates #stoicism"
