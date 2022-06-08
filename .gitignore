@@ -1,4 +1,5 @@
 media/*
+tags
 *.REMOVE_ME
 *.json
 config/*

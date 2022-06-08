@@ -14,8 +14,10 @@ from utils import (
 
 
 def main():
-    quoteobj = get_random_quote(QUOTEFILE, TAGS)
-    quote, author = quoteobj["text"], quoteobj["author"]
+    # quoteobj = get_random_quote(QUOTEFILE, TAGS)
+    # quote, author = quoteobj["text"], quoteobj["author"]
+    quote = "being rude to someone will only satisfy your ego not solve your problem"
+    author = "dhruv"
     text = quote
     font_size = recommend_font_size(text)
     text = wrap_text(text)
