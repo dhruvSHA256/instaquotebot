@@ -20,7 +20,7 @@ def convert_img_insta(img, format="RGB"):
 
 
 def recommend_font_size(text):
-    size = 50
+    size = 55
     l = len(text)
 
     resize_heuristic = 0.9
@@ -56,7 +56,7 @@ def get_random_quote(quotefile, TAGS):
             quoteobj = data[randomtag]["children"][randomidx]
         data[randomtag]["children"][randomidx]["used"] = True
         qfp.seek(0)
-        qfp.write(json.dumps(data))
+        qfp.write(json.dumps(data,sort_keys=True, indent=4))
         qfp.truncate()
         return quoteobj
 

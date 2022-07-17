@@ -10,7 +10,12 @@ def main():
     photo = "quote.png"
     new_img = "/tmp/new_img.jpeg"
     convert_img_insta(photo).save(new_img)
-    caption = f"\n\n....{IG_TAGS}"
+    caption = f""".
+.
+.
+.
+Follow @d_d_ead.py for more. Turn on the post notification.
+{IG_TAGS}"""
     bot.login(username=USERNAME, password=PASS)
     bot.upload_photo(new_img, caption=caption)
 

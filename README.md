@@ -22,3 +22,5 @@ so I decided to make my own bot to make other people feel sad.
 - using a db instead of json
 
 (PS:For educational purpose only)
+
+

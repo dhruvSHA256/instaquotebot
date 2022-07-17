@@ -57,7 +57,7 @@ def download_image(path, name, url):
 
 for blog in TUMBLR_BLOGS:
     print(f"Scrapping {blog}")
-    scrap_tumblr(blog, 20, 1)
+    scrap_tumblr(blog, 40, 3)
 
 # download_image(
 #     "media",

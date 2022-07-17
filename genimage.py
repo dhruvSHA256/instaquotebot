@@ -14,15 +14,18 @@ from utils import (
 
 
 def main():
-    # quoteobj = get_random_quote(QUOTEFILE, TAGS)
-    # quote, author = quoteobj["text"], quoteobj["author"]
-    quote = "being rude to someone will only satisfy your ego not solve your problem"
-    author = "dhruv"
+    quoteobj = get_random_quote(QUOTEFILE, TAGS)
+    quote, author = quoteobj["text"], quoteobj["author"]
+    # quote = "a certain darkness is needed to see the stars"
+    # author = "dhruv"
+    print(quote, author)
     text = quote
     font_size = recommend_font_size(text)
     text = wrap_text(text)
 
+    # background_img_file = "media/aa.jpg"
     background_img_file = get_random_bg(BGDIR)
+    print(background_img_file)
     bgimg = convert_img_insta(background_img_file, "RGBA")
     IMAGE_WIDTH, IMAGE_HEIGHT = bgimg.size
 
